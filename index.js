@@ -81,8 +81,11 @@ app.get('/pastRecord', (req, res) => {
     res.sendFile('/public/pastRecord.html', { root: __dirname });
 });
 
-const PORT = process.env.PORT || 3001; // client side port, 3000 is server side
+// const PORT = process.env.PORT || 3001; // client side port, 3000 is server side
 
-app.listen(PORT, () => {
-    console.log(`Server started and accessible via ${PORT}`);
-});
+// app.listen(PORT, () => {
+//     console.log(`Server started and accessible via ${PORT}`);
+// });
+
+// For netlify
+module.exports = { app };
