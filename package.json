@@ -18,19 +18,19 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.0.0"
   },
-  "name": "ades-ay2223s1-website-2b21-team-3",
-  "description": "1. P2123136 Vernell Lim Xi\r 2. P2129174 Akshay Shashikant\r 3. P2111575 LI KEHAN\r 4. P2129187 Jaziel Robin",
+  "name": "furryfireball",
+  "description": "a fun game",
   "version": "1.0.0",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VX03/ades-ay2223s1-website-2b21-team-3.git"
+    "url": "git+https://github.com/Akridev/furryfireball-website.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/VX03/ades-ay2223s1-website-2b21-team-3/issues"
+    "url": "https://github.com/Akridev/furryfireball-website/issues"
   },
-  "homepage": "https://github.com/VX03/ades-ay2223s1-website-2b21-team-3#readme"
+  "homepage": "https://github.com/Akridev/furryfireball-website#readme"
 }
