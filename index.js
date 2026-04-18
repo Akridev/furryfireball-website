@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 app.use(express.static('public')); // to link the css style sheet
-require('dotenv').config();
+// require('dotenv').config();
 
 app.get('/', (req, res) => {
     res.sendFile('/public/index.html', { root: __dirname });
