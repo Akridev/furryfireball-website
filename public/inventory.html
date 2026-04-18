@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" type="image/x-icon" href="images/player_lives.png" />
+        <title>Inventory</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script
+            src="https://kit.fontawesome.com/4bd303fa0b.js"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="./react/compiled/components/playerInfoBar.js"
+            type="module"
+        ></script>
+        <script src="./js/confetti_api/confetti.js"></script>
+        <script
+            src="./react/compiled/components/inventory.js"
+            type="module"
+        ></script>
+
+        <!-- for react start-------------------------------------->
+        <script
+            crossorigin
+            src="https://unpkg.com/react@18/umd/react.production.min.js"
+        ></script>
+        <script
+            crossorigin
+            src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+        ></script>
+        <script src="https://unpkg.com/react-query@3.39.2/dist/react-query.production.min.js"></script>
+        <!-- for react end---------------------------------------->
+
+        <link rel="stylesheet" type="text/css" href="./css/inventory.css" />
+        <link rel="stylesheet" href="./css/playerInfoBar.css" />
+    </head>
+    <body>
+        <div class="bar" id="playerInfoBar"></div>
+
+        <div class="container">
+            <div class="backgroundImg"></div>
+
+            <div id="inventory"></div>
+        </div>
+    </body>
+</html>

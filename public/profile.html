@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/player_lives.png" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="./css/profile.css" />
+    <link rel="stylesheet" href="./css/playerInfoBar.css" />
+    <script src="./react/compiled/components/playerInfoBar.js" type="module"></script>
+</head>
+
+<body class="body">
+    <script src="./js/profile.js" type="module"></script>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-query@3.39.2/dist/react-query.production.min.js"></script>
+    
+    <div class="bar" id="playerInfoBar"></div>
+
+    <div id="blanket" style="display: none"></div>
+    <div class="popup" id="popUpDiv" style="display: none">
+        <p>Choose your Profile Picture:</p>
+        <script src="./react/compiled/components/imagePopupContent.js"  type="module"></script>
+    </div>
+    
+    <div class="whole-container">
+
+        <div class="top-container">
+            <div id="back">
+                <p>&#8592</p>
+            </div>
+            <div id="deleteAccount">
+                <p>Delete Account</p>
+            </div>
+            <div id="score">
+                <script src="./react/compiled/components/getHighScore.js" type="module"></script>
+            </div>
+
+        </div>
+        <div class="profile">
+            <script src="./react/compiled/components/profile.js" type="module"></script>
+        </div>
+</div>
+</body>
+
+</html>

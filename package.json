@@ -1,0 +1,36 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "serve-static": "^1.15.0"
+  },
+  "scripts": {
+    "babel": "npx babel --watch public/react/src --out-dir public/react/compiled --presets react-app/prod",
+    "build": "node index.js",
+    "lint": "eslint . --ext .js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2",
+    "eslint": "^8.15.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0"
+  },
+  "name": "ades-ay2223s1-website-2b21-team-3",
+  "description": "1. P2123136 Vernell Lim Xi\r 2. P2129174 Akshay Shashikant\r 3. P2111575 LI KEHAN\r 4. P2129187 Jaziel Robin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VX03/ades-ay2223s1-website-2b21-team-3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VX03/ades-ay2223s1-website-2b21-team-3/issues"
+  },
+  "homepage": "https://github.com/VX03/ades-ay2223s1-website-2b21-team-3#readme"
+}

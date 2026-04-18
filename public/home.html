@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="images/player_lives.png" />
+        <title>Home</title>
+        <link rel="stylesheet" href="./css/main.css" />
+        <link rel="stylesheet" href="./css/dailyReward.css" />
+        
+        <link rel="stylesheet" href="./css/playerInfoBar.css" />
+        <script src="./js/confetti_api/confetti.js"></script>
+        <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/react-query@3.39.2/dist/react-query.production.min.js"></script>
+        <script src="./react/compiled/components/dailyReward.js" type="module"></script>
+        <script src="./react/compiled/components/rewardPopUp.js" type="module"></script>        
+        <script src="./react/compiled/components/playerInfoBar.js" type="module"></script>
+
+    </head>
+
+
+<body class="body">
+    
+    <div class="bar" id="playerInfoBar"></div>
+
+    <script src="./js/main.js" type="module"></script>
+
+        <div id="blanket" style="display: none"></div>
+        
+        <div class="popup" id="popUpDaily" style="display: none"></div>
+        <div id="popUpReward" style="display: none">
+        </div>
+        
+        <div class="popup" id="popUpDiv" style="display: none">
+            <h1>Choose Background</h1>
+            <div class="scroll">
+                <div>
+                    <p id="bg">City</p>
+                </div>
+                <div>
+                    <p id="bg">Beach</p>
+                </div>
+                <div>
+                    <p id="bg">Forest</p>
+                </div>
+            </div>
+            <button class="skip" id="bgSkip">Skip</button>
+        </div>
+        
+        <div class="popup" id="popUpDivPlayer" style="display: none">
+            <div class="backArrow" id="pBackArrow">&#8592</div>
+            <h1 class="haveBack">Choose Character</h1>
+            <div class="scroll">
+                <div>
+                    <p id="player">Shadow Dog</p>
+                </div>
+            </div>
+            <button class="skip" id="playerSkip">Skip</button>
+        </div>
+
+        <div class="popup" id="popUpDivMode" style="display: none">
+            <div class="backArrow" id="mBackArrow">&#8592</div>
+            <h1 class="haveBack">Choose Game Mode</h1>
+            <div class="scroll">
+                <div>
+                    <p id="mode">Endless</p>
+                </div>
+                <div>
+                    <p id="mode">Time Rush</p>
+                </div>
+                <div>
+                    <p id="mode">Enemy Rush</p>
+                </div>
+            </div>
+            <button class="skip" id="play">Play</button>
+        </div>
+        <div class="popup" id="popUpLevel" style="display: none">
+            <div class="backArrow" id="lBackArrow">&#8592</div>
+            <h1>Choose level</h1>
+            <div class="scroll" id="levelScroll">
+
+            </div>
+        </div>
+        </div>
+
+        <div class="whole-container">
+            <div id="title">
+                <img src="./images/web_icon.png" width="60" />
+                <h1>Furry Fireball</h1>
+            </div>
+            
+            <div id="friendsBtn">
+                <h1>Friends</h1>
+            </div>
+            <div id="leaderboardBtn" class="topLeft">
+                <h1>Leaderboard</h1>
+            </div>
+            <div id="pastRecordBtn" class="bottomLeft">
+                <h1>Past Record</h1>
+            </div>
+            <div id="storeBtn">
+                <h1>Store</h1>
+            </div>
+            <div id="inventoryBtn">
+                <h1>Inventory</h1>
+            </div>
+            <div id="dailyBtn">
+                <h1>Claim Daily</h1>
+            </div>
+            <div id="luckyBtn">
+                <h1>Lucky Wheel</h1>
+            </div>
+            <div id="playLeaderboardBtn" class="topRight">
+                <h1>Climb the Leaderboard!</h1>
+            </div>
+            <div id="campaignBtn" class="bottomRight">
+                <h1>Campaign</h1>
+            </div>
+            <div id="loginContent">
+                <h1>Log in or create an account to unlock the rest of the features! Some are:</h1>
+                <ul>
+                    <li class="feature">Campaign</li>
+                    <li class="feature">Leveling up</li>
+                    <li class="feature">More Attacks</li>
+                    <li class="feature">Store</li>
+                    <li class="feature">Inventory</li>
+                    <li class="feature">Lucky Wheel</li>
+                    <li class="feature">Daily Rewards</li>
+                    <li class="feature">Friends</li>
+                </ul>
+            </div>
+
+            <!--
+            <div class="top-container">
+                <div id="login"><p id="text">Login</p></div>
+                <div id="store"><p id="text">Store</p></div> 
+                <div id="records"><p id="text">Past Record</p></div>
+                <div id="draws"><p id="text">Lucky Draw</p></div>
+                <div id="daily"><p id="text">Daily</p></div>
+                <div id="logout"><p id="text">Log Out</p></div>
+                
+            </div>
+
+
+            <div class="container">
+                <div class="button-container">
+                    <p id="welcome">Welcome!</p>
+                    <div id="divgame">
+                        <p id="game">Play</p>
+                        <br />
+                    </div>
+                    
+                    <div class="other" id="campaign">
+                        <p id="campaign">Campaign</p>
+                    </div>
+                    <div class="other" id="leadershipBoard">
+                        <p id="leadership">Leaderboard</p>
+                        <br />
+                    </div>
+                    <div class="other" id="friendsBox">
+                        <p id="friends">Friends</p>
+                    </div>
+                    
+                </div>
+            </div>-->
+        </div>
+    </body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="images/player_lives.png" />
+    <title>Game</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./css/game.css" />
+
+    <link rel="stylesheet" href="./css/playerInfoBar.css" />
+    <script
+        src="https://kit.fontawesome.com/4bd303fa0b.js"
+        crossorigin="anonymous"
+    ></script>
+    <script src="./js/confetti_api/confetti.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-query@3.39.2/dist/react-query.production.min.js"></script>
+    <script src="./react/compiled/components/playerInfoBar.js" type="module"></script>
+    <script src="./react/compiled/components/ingameMedicine.js" type="module"></script></head>
+
+<body class="body">
+    <audio src="./music/music-background.mp3" id="audio" type="audio/mpeg"></audio>
+    <div class="bar" id="playerInfoBar"></div>
+
+
+    <div id="blanket" style="display:none;"></div>
+    <div class='popup' id="popUpDiv" style="display:none;"></div>
+    <div class="popup" id="popUpMain" style="display:none;">
+        <span id="objDisplay" style="display:none;">
+            <h1 id="objHeader"></h1>
+            <h4 class="obj" id="obj1"></h4>
+            <h4 class="obj" id="obj2"></h4>
+            <h4 class="obj" id="obj3"></h4>
+        </span>
+        <h1>Menu</h1>
+        <div>
+            <button class="popupMainBtns" id="endGame">End Game</button>
+            <button class="popupMainBtns" id="instruction">Instructions</button>
+            <button class="popupMainBtns" id="audioSetting">Audio Settings</button>
+            <button class="popupMainBtns" id="return">Return to Game</button>
+        </div>
+    </div>
+    </div>
+
+    <div class="popup" id="popUpInfo" style="display:none;">
+        <h1>Instructions</h1>
+        <div id="info">
+            <table>
+                <tr>
+                    <th>Actions</th>
+                    <th>Keyboard Input</th>
+                </tr>
+                <tr>
+                    <td>Attack</td>
+                    <td>Enter Key<b>( &#8629; )</b></td>
+                </tr>
+                <tr>
+                    <td>Move Left</td>
+                    <td>Left Arrow Key<b>( &#8592; )</b></td>
+                </tr>
+                <tr>
+                    <td>Move Right</td>
+                    <td>Right Arrow Key<b>( &#8594; )</b></td>
+                </tr>
+                <tr>
+                    <td>Jump</td>
+                    <td>Up Arrow Key<b>( &#8593; )</b></td>
+                </tr>
+                <tr>
+                    <td>Seat</td>
+                    <td>Down Arrow Key<b>( &#8595; )</b></td>
+                </tr>
+                <tr>
+                    <td>Use Low Medicine</td>
+                    <td>Press Key '1'<b>( 1 )</b></td>
+                </tr>
+                <tr>
+                    <td>Use Medium Medicine</td>
+                    <td>Press Key '2'<b>( 2 )</b></td>
+                </tr>
+                <tr>
+                    <td>Use High Medicine</td>
+                    <td>Press Key '3'<b>( 3 )</b></td>
+                </tr>
+                <tr>
+                    <td>Open Menu</td>
+                    <td>M Key<b>( m )</b></td>
+                </tr>
+                <tr>
+                    <td>Open Instructions Menu</td>
+                    <td>I Key<b>( i )</b></td>
+                </tr>
+                <tr>
+                    <td>Open Audio Setting</td>
+                    <td>A Key<b>( a )</b></td>
+                </tr>
+            </table>
+        </div>
+        <button id="close">close</button>
+    </div>
+
+    
+    <div class="popup" id="popUpAudio" style="display:none;">
+        <h1>Audio Settings</h1>
+        <div id="audio">
+            <p>On / Off Audio</p>
+            <label class="switch"> 
+                <input type="checkbox" id="audioCheck" checked>
+                <span class="slider round"></span>
+            </label>
+            
+            <p>Volume</p>
+            <input type="range" id="volume" min="-1" max="2" value="1" step="0.01">
+            
+            <p>Panner</p>
+            <input type="range" id="panner" min="-1" max="1" value="0" step="0.01">
+        </div>
+        <button id="closeAudio">close</button>
+    </div>
+
+    </div>
+    <button id="menu">menu</button>
+    <div id="medicineContainer">
+        
+    </div>
+    <div id="loading"></div>
+    <canvas id="canvas1"></canvas>
+    </div>
+    <img src="images/player.png" id="player" class="img">
+    <img src="images/layer_images/beach/layer1.png" id="layer1" class="img">
+    <img src="images/layer_images/beach/layer2.png" id="layer2" class="img">
+    <img src="images/layer_images/beach/layer3.png" id="layer3" class="img">
+    <img src="images/layer_images/beach/layer4.png" id="layer4" class="img">
+    <img src="images/layer_images/beach/layer5.png" id="layer5" class="img">
+    <img src="images/layer_images/forest/layer-1.png" id="forest1" class="img">
+    <img src="images/layer_images/forest/layer-2.png" id="forest2" class="img">
+    <img src="images/layer_images/forest/layer-3.png" id="forest3" class="img">
+    <img src="images/layer_images/forest/layer-4.png" id="forest4" class="img">
+    <img src="images/layer_images/forest/layer-5.png" id="forest5" class="img">
+    <img src="images/layer_images/city/layer-1.png" id="city1" class="img">
+    <img src="images/layer_images/city/layer-2.png" id="city2" class="img">
+    <img src="images/layer_images/city/layer-3.png" id="city3" class="img">
+    <img src="images/layer_images/city/layer-4.png" id="city4" class="img">
+    <img src="images/layer_images/city/layer-5.png" id="city5" class="img">
+
+    <img src="images/bat.png" id="bat_enemy" class="img">
+    <img src="images/insect.png" id="insect_enemy" class="img">
+    <img src="images/plant.png" id="plant_enemy" class="img">
+    <img src="images/spider.png" id="spider_enemy" class="img">
+
+    <img src="images/fire.png" id="fire" class="img">
+    <img src="images/store/attacks/a1.png" id="greenfire" class="img">
+    <img src="images/collisionAnimation.png" id="collisionAnimation" class="img">
+    <img src="images/player_lives.png" id="lives" class="img">
+    <img src="images/energy.png" id="energy" class="img">
+    <img src="images/monster.png" id="monster_enemy" class="img" />
+
+    <script src="./js/game_js/main.js" type="module"></script>
+</body>
+
+</html>

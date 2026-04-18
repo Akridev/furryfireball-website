@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient( to left, #d6fefe, #eef8c8);
+    font-family: 'Nunito', sans-serif;
+    
+}
+
+.container {
+    position: relative;
+    display: flex;
+    width: 90%;
+    height: 80%;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+
+
+.forms-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+}
+
+#forms-root {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+.panels-container {
+    width:100%;
+    position: absolute;
+    overflow: hidden;
+    right: 0;
+    top: 0;
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+}
+  
+form, .panel {
+    display: flex;
+    /* width: 50%; */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.backgroundImg {
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background-size: cover;
+    background-image: url(../images/back.png);
+}
+
+.form-title {
+    font-size: 35px;
+    color: rgb(4, 80, 61);
+    margin-bottom: 10px;
+}
+  
+.panel-content {
+    position: absolute;
+}
+
+.panel-content h2 {
+    font-size: 28px;
+    color: rgb(255, 85, 0);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.panel-content p {
+    color: #420bf9;
+    font-size: 25px;
+    line-height: 1.5;
+}
+
+.input-field {
+    max-width: 380px;
+    width: 100%;
+    background-color: #f0f0f0;
+    margin: 10px 0px;
+    /* this height influence the input filed height , the icon height should change accordingly */
+    height: 50px; 
+    border-radius: 50px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0px 10px;
+    position: relative;
+}
+
+.input-field i {
+    text-align: center;
+    line-height: 50px;
+    color: #4d4d4d;
+    transition: 0.4s;
+    font-size: 21px;
+}
+  
+.input-field input, select {
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-size: 18px;
+}
+
+.input-field input::placeholder, select {
+    color: rgb(151, 151, 151);
+    font-weight: 550;
+}
+
+.btn {
+    width: 100px;
+    background-color:  #d6f0ba;
+    border: none;
+    height: 47px;
+    border-radius: 30px;
+    color: rgb(66, 161, 140);
+    font-size: medium;
+    font-weight: 600;
+    margin: 10px 0px;
+    transition: 0.4s;
+}
+  
+.btn:hover {
+    background-color:rgb(66, 161, 140);
+    color:  #d6f0ba;
+}
+
+.btn-sign-in:hover, .btn-sign-up:hover {
+    background-color: rgb(255, 170, 0);;
+    color: rgb(0, 251, 255);
+}
+
+
+.panels-container button {
+    /* z-index: 2; */
+    margin: 20px auto;
+    width: 100px;
+    height: 36px;
+    color: rgb(255, 170, 0);
+    border: 4px solid rgb(0, 251, 255);
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+
+#forget-pass:hover{
+    color: red;
+    cursor: pointer;
+}
+
+/* Animation */
+/* Layer style before click the new to sign up button*/
+.sign-in-form {
+    transition: 1.2s ease-in-out;
+    width: 65%;
+    z-index: 2;    
+}
+
+.sign-up-form {
+    width: 35%;
+    opacity: 0;
+}
+
+.right-panel {
+    position: relative;
+    width: 35%;
+    /* background-image: url(../images/back.png); */
+    transition: 1.2s ease-in-out;
+    /* background-size: cover; */
+    overflow: hidden;
+    z-index: 2;
+}
+
+.left-panel {
+    width: 65%;
+    opacity: 0;
+}
+
+/* After switch on the sign up mode */
+.container.switch-signup .sign-in-form {
+    width: 35%;
+    opacity: 0;
+}
+
+.container.switch-signup .sign-up-form {
+    transition: 1.2s ease-in-out;
+    width: 65%;
+    z-index: 3;
+    opacity: 1;
+}
+
+.container.switch-signup .right-panel {
+    width: 65%;
+    opacity: 0;
+}
+
+.container.switch-signup .left-panel {
+    width: 35%;
+    /* background-image: url(../images/back.png); */
+    transition: 1.2s ease-in-out;
+    /* background-size: cover; */
+    overflow: hidden;
+    z-index: 2;
+    opacity: 1;
+}
+
+/* Remeber me checkbox */
+#rmbCheckBox {
+    position: relative;
+    text-align: left;
+    margin: 5px 0px 15px 0px;
+    padding: 0px 10px;
+    max-width: 380px;
+    width: 100%;
+}
+
+
+
+/* The music switch control */
+#musicSwitch {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    position: absolute; 
+    height: auto;
+    right: 5%; 
+    top: 8px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 25px;
+    margin-top: 3px;
+  }
+  
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 5px #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(32px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 25px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+
+/* Forget password form, verify-email-form */
+.fortget-pass-form, .verify-email-form {
+    width: 100%;
+    margin-top: 7%;
+}
+
+.fortget-pass-form div, .verify-email-form div{
+    margin-top: 20px;
+}
+
+.forget-pass-cont, .verify-email-cont{
+    display: flex;
+    flex-direction: column;
+}
+
+.forget-pass-cont p, .verify-email-cont p {
+    color: rgb(126, 126, 237);
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+}
+
+

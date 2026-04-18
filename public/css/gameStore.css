@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+    
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-top: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.backgroundImg {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background-size:cover;
+    background-image: url(../images/back.jpeg);
+}
+
+#store {
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    background-color: rgb(249, 253, 237);
+    text-align: center;
+    font-size: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+#storeContainer {
+    position: relative;
+    width: 100%;
+    max-height: 100%;
+    border: 2px solid rgb(104, 181, 2);
+    border-bottom: none;
+}
+
+#title {
+    width: 20%;
+    height: 13%;
+    border: 2px dotted rgb(104, 181, 2);
+    background-color: #d6f0ba;
+    margin: auto;
+    margin-top: -60px;
+    border-radius: 50px;
+}
+
+#navBar {
+    width: 100%;
+    height: 10%;
+}
+
+ul {
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+    align-self: flex-start;
+    overflow: hidden;
+    background-color: #bfddfc;
+}
+
+li {
+    margin: auto;
+    float: left;
+    width: 33.3%;
+}
+
+li a {
+    display: block;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding: 17px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #7eb5ec;
+}
+
+
+#proConatiner {
+    display: flex;
+    width: 100%;
+    height: 90%;
+}
+
+#products {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    width: 68%;
+    overflow: scroll;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    width: 70%;
+    max-height: 240px;
+    margin: 20px auto 0px auto;
+    text-align: center;
+    background-color: white;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 60%;
+    border-radius: 30px;
+}
+
+.card p {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.price {
+    color: rgb(242, 141, 0);
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 5px;
+    justify-content: center;
+}
+
+.price img {
+    margin-left: 5px;
+    width: 20px;
+}
+
+#boardPrice {
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#detailBoard #boardPrice p{
+    font-size: 22px;
+    padding-top: 18px;
+}
+
+#coinAtBoard {
+    margin-left: 8px;
+    max-width: 35px;
+}
+
+#soldProduct {
+    position: relative;
+    margin-top: 0;
+}
+
+#soldOutBanner {
+    position: absolute;
+    width: 24%;
+    z-index: 1;
+}
+
+
+#detailBoard {
+    position: relative;
+    right: 0;
+    margin-left: auto;
+    width: 33.3%;
+    height: 100%;
+    background-color: #d6f0ba;
+}
+
+#detailBoard img {
+    width: 70%;
+    height: 25%;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+#detailBoard p {
+    font-size: 16px;
+    font-weight: bolder;
+    margin-top: 5px;
+}
+
+.btn {
+    width: 120px;
+    height: 35px;
+    background-color:  #ffe100;
+    border: none;
+    border-radius: 30px;
+    color: rgb(0, 161, 126);
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    transition: 0.4s;
+} 
+
+
+.btn:hover {
+    background-color: rgb(0, 161, 126);
+    color: #ffe100;
+} 
+
+#soldOutBtn {
+    background-color:  #fff185;
+    color: rgb(255, 0, 0);
+}
+
+
+#productBoard {
+    margin: auto;
+    width: 80%;
+    max-height: 215px;
+}
+  
+
+#playerInfoBar {
+    z-index: 2;
+}

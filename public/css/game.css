@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap");
+
+html {
+    background-image: linear-gradient( to left, #d6fefe, #eef8c8);  
+    overflow: hidden;
+}
+
+.instructions {
+    margin-top: 100px;
+}
+
+p {
+    font-size: 20px;
+    padding: 10px;
+    font-family: 'Nunito', sans-serif;
+    
+}
+
+.img {
+    height: 0;
+    width: 0;
+    display: none;
+}
+
+body {
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width:100%;
+    height:100%;
+    background-image: linear-gradient( to left, #d6fefe, #eef8c8);  
+}
+
+#canvas1 {
+    border: 5px solid black;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    max-height: 80%;
+}
+
+
+#blanket {
+    background-color:#111;
+    opacity: 0.65;
+    *background:none;
+    position:absolute;
+    z-index: 2;
+    top:0px;
+    left:0px;
+    width:100%;
+    height: 100%;
+ }
+
+button {
+    cursor: pointer;
+}
+ 
+.fa-star {
+    text-shadow: 0px 0px 2px black, 0px 0px 2px black;
+    font-size: 60px;
+    margin-right: 2%;
+}
+
+.campaignTable table, th, td{
+    border: none !important;
+    text-align: left;
+    font-family: 'Nunito', sans-serif;
+    font-size: 25px;
+}
+.campaignTable table{
+    border-top: 1px solid black !important;
+    padding: 0px 40px;
+}
+
+.popup {
+    background-color:rgba(183, 210, 217);
+    width:550px;
+    height:500px;
+    z-index: 3;
+    position: absolute;
+    top: 10%;
+    left: 33%;
+    margin-left: -5%;
+    margin-top: -7%;
+    border-radius: 30px;
+ }
+
+.popup h1{
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 1000;
+ }
+ .popup div{
+    margin-left: 8%;
+    margin-right: auto;
+    overflow-y: none;
+    height: 100%;
+    width: 90%;
+    vertical-align: middle;
+    align-self: center;
+    position:relative; 
+    right:30px; 
+    left:30px 
+
+ }
+ #popUpInfo {
+    z-index: 4;
+ }
+ #popUpInfo div {
+    margin-left: -1%;
+
+    width: 95%;
+    height: 65%;
+    overflow-x: auto;
+    overflow-y: none;
+        
+ }
+ #popUpInfo div table, th, td{
+    border: 2px solid azure;
+    border-collapse: collapse;
+}
+#popUpInfo div table{
+    margin-left: 3%;
+    width: 90%;
+    height: 60%;
+}
+#popUpInfo div table th{
+    font-size: 25px;
+    
+    color: rgb(74, 73, 73);
+    font-family: 'Nunito', sans-serif;
+}
+#popUpInfo div table td{
+    font-size: 20px;
+    padding: 4.5px;
+    font-family: 'Nunito', sans-serif;
+    
+}
+
+.popup #close{
+    font-size: 20px;
+    width: 150px;
+    height: 50px;
+    margin: 5%;
+    margin-left: 35%;
+    color: rgb(2, 67, 74);
+}
+#popUpAudio #closeAudio{
+    font-size: 20px;
+    width: 150px;
+    height: 50px;
+    margin: 5%;
+    margin-left: 35%;
+    color: rgb(2, 67, 74);
+}
+#volume{
+    width:75%
+}
+#panner{
+    width:75%
+}
+#audio {
+    width: 80%;
+    height: 60%;
+
+}
+
+#popUpAudio p{
+
+    margin: 5px;
+    width: 30%;
+}
+#popUpAudio label{
+    float: right;
+    margin-right: 50%;
+    margin-top: -10%;
+}
+.popup div button{
+    font-size: 20px;
+    margin: 20%;
+}
+ #popUpMain button{
+    width: 75%;
+    height: 15%;
+    margin: 2%;
+    border-radius: 20px;
+ }
+
+ #popUpMain button.cpmBtn{
+    width: 75%;
+    height: 11%;
+    margin: 2%;
+    border-radius: 20px;
+ }
+
+ #text {
+     text-align: center;
+ }
+
+ #menu {
+     width: 10%;
+     height: 50px;
+     font-size: 30px;
+     border-radius: 30px;
+     transition: 0.3s;
+     font-family: 'Nunito', sans-serif;
+     top:20%;
+     left: 2%;
+     position: absolute;
+ }
+ button:hover {
+    background-color: darkgray;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+#loading {
+    position: absolute;
+    z-index:80;
+    display: flex;
+    justify-content: center;
+    left: 47.3%;
+    bottom: 43%;
+}
+
+#loading::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgb(174, 255, 196);
+    border-top-color: #009579;
+    border-radius: 50%;
+    animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+
+/* medicine container */
+#medicineContainer {
+    position: relative;
+    top: 30%;
+    width: 150px;
+    left: 2.5%;
+}
+
+.item {
+    position:relative;
+    margin:5px auto 10px auto;
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.item img {
+    width: 60px;
+    height: 60px;
+}
+
+.item p {
+    margin-top: 30px;
+    margin-left: 5px;
+    font-size: 16px;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.num-badge{
+    position: relative;
+    right:-47px;
+    top:10px;
+    background:red;
+    text-align: center;
+    border-radius: 10px;
+    color:white;
+    padding:2px 5px;
+    font-size:15px;
+}
+
+#objHeader {
+    text-decoration: underline;
+}
+
+.obj {
+    font-size: 22px;
+    font-weight: 600;
+    margin-left: 10%;
+}

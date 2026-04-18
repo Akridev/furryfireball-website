@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" type="image/x-icon" href="images/player_lives.png" />
+        <title>Lucky Draw</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <script
+            src="./react/compiled/components/luckyDraw.js"
+            type="module"
+        ></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="./react/compiled/components/playerInfoBar.js" type="module"></script>
+        <script src="./js/confetti_api/confetti.js"></script>
+        <!-- for react start-------------------------------------->
+        <script
+            crossorigin
+            src="https://unpkg.com/react@18/umd/react.production.min.js"
+        ></script>
+        <script
+            crossorigin
+            src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+        ></script>
+        <script src="https://unpkg.com/react-query@3.39.2/dist/react-query.production.min.js"></script>
+        <!-- for react end---------------------------------------->
+
+        <!--To resolve favicon.ico 404 (Not Found) err-->
+        <link rel="shortcut icon" href="#" />
+        <link rel="stylesheet" type="text/css" href="./css/luckyDraw.css" />
+        <link rel="stylesheet" href="./css/playerInfoBar.css" />
+    </head>
+    <body>
+        <!-- <div id="title">
+            <h4>Lucky Draw</h4>
+        </div> -->
+        <div class="bar" id="playerInfoBar"></div>
+
+        <div id="luckyDrawContainer"></div>
+        <audio
+            controls="controls"
+            id="ding"
+            src="./music/ding.wav"
+            type="audio/wav"
+        ></audio>
+        <audio
+            controls="controls"
+            id="wheel"
+            src="./music/wheel.wav"
+            type="audio/wav"
+        ></audio>
+    </body>
+</html>

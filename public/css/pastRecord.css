@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* background-image: linear-gradient( to left, #d6fefe, #eef8c8); */
+    font-family: 'Nunito', sans-serif;
+    
+}
+body::after {
+    content:'';
+    background: url('../images/back.jpeg') no-repeat center center;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    opacity: 0.4; /* Here is your opacity */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+h2 {
+    background-image: linear-gradient( to left, #d6fefe, #eef8c8);
+}
+
+#graphContainer {
+    position: relative;
+    align-items: center;
+    text-align: center;
+    margin: 3% auto auto; /* top | horizontal | bottom */
+    width: 90%;
+    height: 80%;
+    background-color: #fff;
+    /* background-image: linear-gradient( to left, #d6fefe, #eef8c8); */
+    overflow: hidden;
+    top: 30px;
+}
+
+
+
+
+/* Style the lines by removing the fill and applying a stroke */
+.line {
+    fill: none;
+    stroke: #ffab00;
+    stroke-width: 3;
+}
+  
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+/* Style the dots by assigning a fill and stroke */
+.dot {
+    fill: #ffab00;
+    stroke: #fff;
+}
+  
+  .focus circle {
+  fill: none;
+  stroke: steelblue;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" type="image/x-icon" href="images/player_lives.png" />
+        <title>Reset Password</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script
+            src="https://kit.fontawesome.com/4bd303fa0b.js"
+            crossorigin="anonymous"
+        ></script>
+        <script type="text/javascript" src="./js/resetPass.js"></script>
+        <!-- strange here the css file path only work like this -->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="./css/registerLoginMailPass.css"
+        />
+    </head>
+    <body>
+        <a href="/"
+            ><input
+                type="submit"
+                value="Login"
+                class="btn"
+                style="position: absolute; right: 5%; top: 0px"
+        /></a>
+        <div class="container forget-pass-cont" style="top: 15px">
+            <p>No Worries!</p>
+
+            <form action="#" class="fortget-pass-form">
+                <h2 class="form-title">Reset Password</h2>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input
+                        type="password"
+                        placeholder="Enter your password"
+                        id="resetPass"
+                    />
+                </div>
+                <div class="input-field">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <input
+                        type="password"
+                        placeholder="Confirm your password"
+                        id="resetPassConfirm"
+                    />
+                </div>
+                <input
+                    type="button"
+                    value="Reset"
+                    id="resetBtn"
+                    class="btn"
+                    style="width: 120px"
+                />
+            </form>
+        </div>
+    </body>
+</html>

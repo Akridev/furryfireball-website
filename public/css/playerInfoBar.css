@@ -1,0 +1,409 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap");
+#playerInfoBar {
+    background-color: rgb(56, 163, 32);
+    top: 0;
+    width: 100%;
+    height: 100px;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position:absolute;
+    left:0;
+    z-index: 99;
+}
+
+.PB__skeleton {
+    position: inherit;
+    top: inherit;
+    bottom: inherit;
+    left: inherit;
+    right: inherit;
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.PB__skeleton-text {
+    width: 9%;
+    margin-top: 5px;
+    height: 40px;
+}
+
+.PB__skeleton-border {
+    border-radius: 10px;
+}
+
+.PB__skeleton-player-level{
+    position: absolute;
+    left: 25.5%;
+    font-weight: bold;
+    font-size: 35px;
+    top: 17%;
+}
+
+.PB__skeleton-progress {
+    width:308px;
+    height:32px;
+    position: absolute;
+    top: 34%;
+    left: 29.5%;
+    border-radius: 5px;
+}
+
+.PB__skeleton-nav{
+    position: absolute;
+    top: 17%;
+    right: 30%;
+    width: 250px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: rgb(110, 249, 110);
+    }
+
+    100% {
+        background-color: #63c791
+    }
+}
+
+.PB__player_pic{
+    position: absolute;
+    left: 11%;
+    border-radius: 50%;
+    height:66px;
+    width: 66px;
+    top: 17%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.PB__player_pic_guest{
+    position: absolute;
+    left: 11%;
+    border-radius: 50%;
+    height:66px;
+    width: 66px;
+    top: 17%;
+}
+
+.PB__player_pic:hover{
+    filter:brightness(50%)
+}
+
+
+.PB__player-status{
+    position: absolute;
+    left: 15.8%;
+    font-weight: bold;
+    font-size: 35px;
+    top: 25%;
+    font-family: 'Nunito', sans-serif;
+}
+
+.PB__gameIcon {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+}
+
+.PB__gameName {
+    position: absolute;
+    font-size: 25px;
+    font-weight: bolder;
+    top: 18%;
+    right: -7px;
+    color: #ffba81;
+}
+
+.PB__player-level{
+    position: absolute;
+    left: 25%;
+    font-weight: bold;
+    font-size: 35px;
+    top: 17%;
+}
+
+#PB__levelShape {
+    fill: rgb(0, 255, 149);
+    stroke-width: 4px;
+    stroke: black;
+}
+
+svg > text {
+    font-size: 270px;
+}
+
+#PB__progress {
+    width:300px;
+    height:32px;
+    border:1px solid #000;
+    position: absolute;
+    margin-left: 100%;
+    top: 21%;
+    background-color: gray;
+    display: block;
+    border-radius: 5px;
+}
+
+#PB__progress div {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    width:0%;
+    transition: 0.5s ease 0s;
+    max-width: 100%;
+}
+
+#PB__progress .PB__xpCurr {
+    background-color:#009;
+}
+
+.PB__levelPopup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 450px;
+    height: 300px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1), 0 0 0 1000px rgba(255, 255, 255, 0.8);
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 40px;
+    z-index: 9999999999999999999999999999999999999999999;
+    color: #000;
+    border-radius: 10px;
+    border: rgb(245, 212, 135) 1px solid;
+}
+
+.PB__closeLevelPopup{
+    border-top-right-radius: inherit;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 20px;
+    background: #f00;
+    color: #fff;
+    cursor: pointer;
+}
+
+.PB__xpSpecifics{
+    position: absolute;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 40%;
+}
+
+
+.PB__luck {
+    position: absolute;
+    top: 17%;
+    right: 21%;
+    background: rgb(110, 249, 110);
+    border-radius: 5px;
+    height: 60px;
+    width: 117px;
+}
+
+.PB__luckImg {
+    position: absolute;
+    top: 8%;
+    right: 3px;
+}
+
+.PB__luckyChance {
+    position: absolute;
+    top: 15%;
+    width: 50%;
+    height: 100%;
+    right: 30%;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.PB__coin {
+    position: absolute;
+    top: 17%;
+    right: 9%;
+    background: rgb(110, 249, 110);
+    border-radius: 5px;
+    height: 60px;
+    width: 160px;
+    text-align-last: right;
+}
+
+.PB__coinImg {
+    position: absolute;
+    top: 8%;
+    right: 3px;
+}
+
+.PB__coinValue {
+    position: absolute;
+    top: 15%;
+    height: 100%;
+    right: 37%;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.PB__barWidget {
+    position: absolute;
+    border-radius: 5px;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+}
+
+.PB__barWidget:hover {
+    filter: brightness(90%);
+}
+
+
+.PB__green {
+    background: rgb(110, 249, 110);
+}
+
+.PB__red {
+    background: #f00;
+}
+
+.PB__blue {
+    background: #009;
+}
+
+.PB__logBtn {
+    font-size: 25px;
+    position: absolute;
+    width: 100px;
+    top: 14%;
+    right: 1%;
+    font-weight: 500;
+}
+
+.PB__logoutLabel {
+    position: absolute;
+    top: 14%;
+    left: 6%;
+}
+
+.PB__loginLabel {
+    position: absolute;
+    top: 14%;
+    left: 15%;
+}
+
+.PB__dropdown {
+    position: absolute;
+    display: inline-block;
+    top: 17%;
+    right: 30%;
+}
+
+.PB__dropbtn {
+    background: rgb(110, 249, 110);
+    color: white;
+    width: 250px;
+    font-size: 25px;
+    border: none;
+    height: 60px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.PB__dropdownLabel {
+    position: absolute;
+    top:30%;
+    left:80px;
+    font-weight: 700;
+}
+
+.PB__dropdownImgLabel {
+    position: absolute;
+    top: 14%;
+    left: 15px;
+}
+
+.PB__dropdownImgs {
+    position: absolute;
+    top: 14%;
+    left: -1px;
+}
+
+.PB__dropdownImgsPositioning {
+    position: relative;
+    left: -14px;
+}
+
+.PB__dropdownSelect {
+    position: absolute;
+    top:7%;
+    left:80px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.PB__dropdownSelectPositioning {
+    position: relative;
+    top:20%;
+}
+
+.PB__dropdownSelectImg {
+    position: absolute;
+    left: 10%;
+    margin-top: 6px;
+}
+
+.PB__dropdownIcon {
+    position: absolute;
+    bottom: 10px;
+    right: 7px;
+    fill: white;
+}
+
+.PB__dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(110, 249, 110);
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.PB__dropdown-content a {
+    color: white;
+    height: 60px;
+    text-decoration: none;
+    display: block;
+    border-bottom: #000 1px solid;
+    transition: 0.3s;
+}
+
+.PB__dropdown-content a:hover {
+    background-color: rgb(5, 134, 22);
+}
+
+.PB__dropdown:hover .PB__dropdown-content {
+    display: block;
+}
+
+.PB__dropdown:hover .PB__dropbtn {
+    background-color: #3e8e41;
+}
+
+.PB__leaderboardActive {
+    left: 24%;
+    top: 20%
+}
+
+.PB__luckyDrawActive {
+    left: 8%
+}
+
+.PB__luckyDrawActiveImg {
+    top: 5%
+}

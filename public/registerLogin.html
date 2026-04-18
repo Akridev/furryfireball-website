@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" type="image/x-icon" href="images/player_lives.png" />
+        <title>Register & Login</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <script
+            src="./react/compiled/components/registerLoginForm.js"
+            type="module"
+        ></script>
+
+        <script type="text/javascript" src="./js/registerLogin.js"></script>
+
+        <script
+            src="https://kit.fontawesome.com/4bd303fa0b.js"
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- for react start-------------------------------------->
+        <script
+            crossorigin
+            src="https://unpkg.com/react@18/umd/react.production.min.js"
+        ></script>
+        <script
+            crossorigin
+            src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+        ></script>
+        <script src="https://unpkg.com/react-query@3.39.2/dist/react-query.production.min.js"></script>
+        <!-- for react end---------------------------------------->
+
+        <!--To resolve favicon.ico 404 (Not Found) err-->
+        <link rel="shortcut icon" href="#" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="./css/registerLoginMailPass.css"
+        />
+    </head>
+    <body>
+        <!-- Game music control Start -->
+        <div id="musicSwitch">
+            <p>Game Music</p>
+            <label class="switch">
+                <input id="musicControl" type="checkbox" checked />
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <audio id="audioPlay" loop autoplay>
+            <!--muted autoplay-->
+            <source src="./music/music-background.mp3" type="audio/mpeg" />
+        </audio>
+        <!-- Game music control End -->
+
+        <div class="container">
+            <div class="forms-container"></div>
+
+            <div class="panels-container">
+                <div class="panel left-panel">
+                    <div class="backgroundImg"></div>
+                    <div class="panel-content">
+                        <h2>Already signed up?</h2>
+                        <p>
+                            If you already have an account, sign in and enjoy
+                            our game! We've missed you!
+                        </p>
+                        <button class="btn-sign-in">Sign in</button>
+                    </div>
+                </div>
+
+                <div class="panel right-panel">
+                    <div class="backgroundImg"></div>
+                    <div class="panel-content">
+                        <h2>New to Furry Fireball?</h2>
+                        <p>Sign up and have fun with our game!</p>
+                        <button class="btn-sign-up">Sign up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
