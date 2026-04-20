@@ -1,10 +1,13 @@
 const express = require('express');
 const app = express();
 app.use(express.static('public')); // to link the css style sheet
-// require('dotenv').config();
+require('dotenv').config();
 
 app.get('/', (req, res) => {
+    console.log("HEREEE!!++++++++++++++++++++");
+    console.log(__dirname);
     res.sendFile('/public/index.html', { root: __dirname });
+    console.log("Still can pass thru");
 });
 
 // To login or register
