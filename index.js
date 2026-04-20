@@ -88,4 +88,4 @@ app.get('/pastRecord', (req, res) => {
 // });
 
 // For netlify
-module.exports = { app };
+module.exports = app;
