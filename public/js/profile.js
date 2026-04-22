@@ -1,11 +1,10 @@
-const API_SERVER = process.env.API_SERVER;
 import { hide } from "./game_js/popUp.js";
 //-----------------------------------------------------
 const isLocalhost =
     location.hostname === 'localhost' || location.hostname === '127.0.0.1';
 const STORAGE_API_HOST = isLocalhost
     ? `http://localhost:4000`
-    : API_SERVER;
+    : `https://furryfireball-server.vercel.app`;
 
 // -------------Getting tokens-----------------------
 let accessToken = localStorage.getItem('accessToken');
