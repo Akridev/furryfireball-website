@@ -1,11 +1,13 @@
+require('dotenv').config();
+const API_SERVER = process.env.API_SERVER;
 const isLocalhost =
     location.hostname === 'localhost' || location.hostname === '127.0.0.1';
 const STORAGE_API_HOST = isLocalhost
     ? `http://localhost:4000`
-    : `https://ades-host-server.herokuapp.com`;
+    : API_SERVER;
 const AUTH_SERVER_HOST = isLocalhost
     ? `http://localhost:4001`
-    : ` https://ades-host-auth-server.herokuapp.com`;
+    : `https://ades-host-auth-server.herokuapp.com`;
 
 window.addEventListener('DOMContentLoaded', function () {
     // Getting all the variables
