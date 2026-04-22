@@ -1,4 +1,3 @@
-require('dotenv').config();
 const API_SERVER = process.env.API_SERVER;
 import { hide } from "./game_js/popUp.js";
 //-----------------------------------------------------

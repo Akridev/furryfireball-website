@@ -1,4 +1,3 @@
-require('dotenv').config();
 const API_SERVER = process.env.API_SERVER;
 const isLocalhost =
     location.hostname === 'localhost' || location.hostname === '127.0.0.1';
