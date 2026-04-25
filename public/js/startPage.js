@@ -5,7 +5,7 @@ const STORAGE_API_HOST = isLocalhost
     : `https://furryfireball-server.vercel.app`;
 const AUTH_SERVER_HOST = isLocalhost
     ? `http://localhost:4001`
-    : ` https://ades-host-auth-server.herokuapp.com`;
+    : `https://furryfireball-auth.vercel.app`;
 
 window.addEventListener('DOMContentLoaded', function () {
     // checking if logged in, regenerate token---------------------------------------------
