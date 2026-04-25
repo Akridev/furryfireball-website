@@ -8,11 +8,12 @@
   },
   "scripts": {
     "babel": "npx babel --watch public/react/src --out-dir public/react/compiled --presets react-app/prod",
-    "build": "npx babel --watch public/react/src --out-dir public/react/compiled --presets react-app/prod && npm ci && node index.js",
+    "build": "npm run babel && npm i && node index.js",
     "lint": "eslint . --ext .js"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2",
     "eslint": "^8.15.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
