@@ -2,10 +2,10 @@ const isLocalhost =
     location.hostname === 'localhost' || location.hostname === '127.0.0.1';
 const STORAGE_API_HOST = isLocalhost
     ? `http://localhost:4000`
-    : `https://ades-host-server.herokuapp.com`;
+    : `https://furryfireball-server.vercel.app`;
 const AUTH_SERVER_HOST = isLocalhost
     ? `http://localhost:4001`
-    : ` https://ades-host-auth-server.herokuapp.com`;
+    : `https://furryfireball-auth.vercel.app`;
 
 let accessToken = localStorage.getItem('accessToken');
 let refreshToken = localStorage.getItem('refreshToken');
