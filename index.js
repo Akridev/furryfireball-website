@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
 app.use(express.static('public')); // to link the css style sheet
-require('dotenv').config();
+const isLocalhost = !process.env.NETLIFY;
+if(isLocalhost) require('dotenv').config();
 
 app.get('/', (req, res) => {
-    console.log("HEREEE!!++++++++++++++++++++");
     console.log(__dirname);
     res.sendFile('/public/index.html', { root: __dirname });
     console.log("Still can pass thru");
@@ -84,11 +84,16 @@ app.get('/pastRecord', (req, res) => {
     res.sendFile('/public/pastRecord.html', { root: __dirname });
 });
 
-// const PORT = process.env.PORT || 3001; // client side port, 3000 is server side
+if(isLocalhost){
+    const PORT = process.env.PORT || 3001; // client side port, 3000 is server side
 
-// app.listen(PORT, () => {
-//     console.log(`Server started and accessible via ${PORT}`);
-// });
+app.listen(PORT, () => {
+    console.log(`Server started and accessible via ${PORT}`);
+});
+}
 
-// For netlify
+else // For netlify
 module.exports = app;
+
+
+
