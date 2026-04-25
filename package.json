@@ -8,7 +8,7 @@
   },
   "scripts": {
     "babel": "npx babel --watch public/react/src --out-dir public/react/compiled --presets react-app/prod",
-    "build": "npx babel --watch public/react/src --out-dir public/react/compiled --presets react-app && npm ci && node index.js",
+    "build": "npx babel --watch public/react/src --out-dir public/react/compiled --presets react-app/prod && npm ci && node index.js",
     "lint": "eslint . --ext .js"
   },
   "devDependencies": {
