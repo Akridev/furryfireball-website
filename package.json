@@ -12,7 +12,7 @@
   },
   "scripts": {
     "babel": "npx babel --watch public/react/src --out-dir public/react/compiled --presets react-app/prod",
-    "build": "npx babel --watch public/react/src --out-dir public/react/compiled --presets react-app/prod && npm i && node index.js",
+    "build": "NODE_ENV=production npx babel --watch public/react/src --out-dir public/react/compiled --presets react-app/prod && npm i && node index.js",
     "lint": "eslint . --ext .js"
   },
   "devDependencies": {
