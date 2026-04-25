@@ -7,7 +7,7 @@
     "serverless-http": "^4.0.0"
   },
   "scripts": {
-    "babel": "npx babel --watch public/react/src --out-dir public/react/compiled --presets react-app/prod",
+    "babel": "npx babel public/react/src --out-dir public/react/compiled --presets react-app/prod",
     "build": "npm run babel && npm ci && node index.js",
     "lint": "eslint . --ext .js"
   },
