@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "@babel/cli": "^7.28.6",
+    "@babel/core": "^7.29.0",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "netlify-cli": "^25.0.0",
@@ -8,7 +10,7 @@
   },
   "scripts": {
     "babel": "npx babel --watch public/react/src --out-dir public/react/compiled --presets react-app/prod",
-    "build": "npx babel --watch public/react/src --out-dir public/react/compiled --presets react-app/prod && npm i && node index.js",
+    "build": "babel --watch public/react/src --out-dir public/react/compiled --presets react-app/prod && npm i && node index.js",
     "lint": "eslint . --ext .js"
   },
   "devDependencies": {
